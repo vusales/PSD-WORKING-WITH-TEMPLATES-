@@ -2,8 +2,9 @@
 
 I created website with flex property from psd template using online photopea editor.
 
-Template is below:
-![psd](https://user-images.githubusercontent.com/58183073/135839499-2a7a218f-b051-4834-93d2-21c5c6b228d2.jpg)
+Template is below: \n
+![psd](https://user-images.githubusercontent.com/58183073/135839784-cb97218e-23d4-414a-8db7-c7109d5602e6.jpg)
+
 
 Click ----> https://vusales.github.io/PSD-WORKING-WITH-TEMPLATES-/
 
