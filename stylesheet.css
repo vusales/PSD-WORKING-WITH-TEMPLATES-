@@ -46,12 +46,13 @@
     cursor: pointer;
 }
 .headSection{
-    margin-top: 208px !important;
+    /* margin-top: 208px !important; */
     max-width: 90%;
     display: flex;
     margin: auto;
     justify-content: center;
     flex-direction: column;
+    align-self: center;
 }
 .buttomInput {
     width: 210px;
@@ -72,12 +73,6 @@
    background-color: #53d153; 
 }
 .scrollInput {
-    display: flex;
-    position: absolute;
-    bottom: 20px;
-    right: 46.5%;
-    /* margin: auto; */
-     /*margin-top: 14%; */
     width: 115px;
     height: 25px;
     border-radius: 25px;   
@@ -85,6 +80,9 @@
     cursor: pointer;
     font-family:var(--rubikfont);
     font-size: 15px;
+    display: flex;
+    align-self: center;
+    margin-bottom: 20px;
 }
 .scrolla {
     padding:5px 9px;
@@ -488,27 +486,38 @@ header {
    background-size: 100% 100%;
    -webkit-filter: contrast(120%);
    filter: contrast(120%);
-   position: relative;
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
 }
 nav {
-    max-width:90%;
+    width:90%;
     background-color: transparent; 
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     justify-content:space-between;
-    padding-top:20px;
+    padding:20px;
     }
-header nav ol {
+header nav .o-l {
     display: flex;
     justify-content: space-between;
+    width: 32%;
 }
-header nav ol li {
+.o-l.second {
+    display: none;
+}
+header nav .o-l li {
     margin-left: 20px;
     font-size: 16px;
-    color: #fff;
+    color: #F8F9F9;
     font-family:var(--quickfont);
+    border: 5px solid transparent;
+    font-weight: 600;
+
 }
-header nav ol li:hover{
+header nav .o-l li:hover{
     font-weight: bold;
     border-top: 5px solid #53d153;
     transition: .3s ease-out;
@@ -529,7 +538,7 @@ header section h1 {
         padding-bottom:30px;
     }
     .myImageSection {
-      padding-left:14.5%;
+      justify-content: center;
     }
     .divsSection {
         margin-left: 3%;
@@ -551,8 +560,6 @@ header section h1 {
     .myCircleImgDiv{
         flex-direction: column;
     }
-   
-
 }
 
 @media screen and (max-width: 1200px){
@@ -568,6 +575,19 @@ header section h1 {
 
     .resentPostDiv{
         width: 50% !important;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+    .o-l.first {
+        display: none;
+    }
+
+    .o-l.second{
+        display: flex;
+        width: 90%;
+        padding: 20px;
     }
 
 
