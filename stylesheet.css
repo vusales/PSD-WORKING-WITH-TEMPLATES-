@@ -354,7 +354,7 @@
     box-shadow: 0px 10px 13px darkgreen !important;
 }
 .seventhSection {
-    height: 440px;
+    min-height: 440px;
     width: 100%;
     display: flex;
     background-color: rgb(51, 51, 51);
@@ -362,17 +362,21 @@
     align-items: center;
 }
 .seventhSectionDiv {
-    width: 20%;
-    height: 400px;
+    width: 25%;
+    min-height: 400px;
     text-align: center;
     color: white;
     font-family:var(--mulifont);   
     margin-top: 25px; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
 }
 .and {
-    display: flex !important;
-    margin:auto !important;
-    margin-top: 5%;    
+   margin:0 !important ; 
+
 }
 .facebokIcon {
     font-size: 20px;
@@ -502,7 +506,7 @@ header section h1 {
 }
 
 
-@media only screen and (max-width: 600px){
+@media screen and (max-width: 600px){
     .myNextBigContainer , .fourthPartofSite , .fifthSection , .sixthSection , .seventhSection {
         height: auto;
         padding-bottom:30px;
@@ -516,19 +520,25 @@ header section h1 {
     .h2section h2 {
         margin-left:10%;
     }
-    /* .myCircleImgDiv {
-        height: auto;
-    }
-    .circleImg {
-        width: 50%;
+} 
+
+@media screen and (max-width: 1200px){
+    .seventhSection{
+        flex-direction: column;
     }
 
-    .seventhSection {
-        padding-bottom: 100px;
-    }
     .seventhSectionDiv {
-        width: 40%;
+        width: 50%;
+        min-height: 200px;
+      
     }
-} */
+
+    .resentPostDiv{
+        width: 50% !important;
+    }
+
+
+
+}
 
 
