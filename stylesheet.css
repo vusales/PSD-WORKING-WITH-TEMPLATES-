@@ -259,17 +259,14 @@
     justify-content: center;
     align-items: center;
     justify-content: space-around;
-    margin-top:75px;
+    margin-top:46px;
     font-family:var(--rubikfont);
 }
 .IcantFindName p {
     text-align: center;
     font-size: 14px;
 }
-.next {
-    color: lightgrey;
-    font-size: 30px;
-}
+
 .fifthSection {
     min-height: 490px;
     width: 100%;
@@ -530,6 +527,53 @@ header section h1 {
     font-weight:bolder;
     text-align: center;
 }
+
+/* TESTIMINIAL SCROLL SECTION  */
+.mySlides {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    height: 90%;
+}
+
+.mySlides p {
+    line-height: 23px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  min-width: 85%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -28px;
+  color: lightgrey;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
 
 
 @media screen and (max-width: 600px){

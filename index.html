@@ -33,10 +33,11 @@
             <a href="#" class="myLogoLink">Switch</a>
             <div class="formDiv">
                 <form action="#">
-                    <input type="search" name="search" placeholder="search..." class="firstform" method="get" />
-                    <button style="background-color: transparent;outline: none; border: none;"><i class="fas fa-search" id="searchDivIcon"></i></button>
-                </form>
-              
+                    <input id="searchInput" type="search" name="search" placeholder="search..." class="firstform" method="get" />
+                    <button id="searchButton" style="background-color: transparent;outline: none; border: none;">
+                        <i class="fas fa-search" id="searchDivIcon"></i>
+                    </button>
+                </form> 
             </div>
             <ol class="o-l second" >
                 <a href="#">
@@ -144,11 +145,23 @@
             </section>
         </section>
         <section class="IcantFindName">
-            <i class="fas fa-angle-left next"></i>
-            <p>Awalnya saya tidak menderita penyakit apapun,<br>namun setelah saya tidak berobat ke klinik tongfang,
-                saya dinyatakan<br> tidak menderita penyakit apapun!
-            </p>
-            <i class="fas fa-angle-right next"></i>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <p>Awalnya saya tidak menderita penyakit apapun,<br>namun setelah saya tidak berobat ke klinik tongfang,saya dinyatakan<br> tidak menderita penyakit apapun!
+                    </p>
+                </div>
+            
+                <div class="mySlides">
+                    <p>Lorem saya tidak menderita penyakit apapun,<br>ipsum setelah saya tidak berobat ke klinik tongfang,saya dinyatakan<br> Never give up ! tidak menrep yaki delete!
+                    </p>
+                </div>
+               
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
         </section>
     </section>
 
@@ -328,6 +341,59 @@
 
 
 
+    <script>
+
+        // search input codes
+        var button = document.querySelector(`#searchButton`) ; 
+        var input = document.querySelector(`#searchInput`) ; 
+
+
+        input.onkeyup = (event) => {
+            if (event.keyCode === 13) {
+                openSearchPage();
+            }
+        };
+
+        button.onclick = openSearchPage;
+
+        function openSearchPage() {
+            const query = input.value;
+            document.location.href = `/search/${query}`;
+        }
+
+        // courusel codes 
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";   
+        }
+        
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+
+
+
+
+
+
+    </script>
 </body>
 
 </html>
